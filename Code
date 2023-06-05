@@ -1,0 +1,45 @@
+-- Insert this script inside a proximity prompt
+
+-- Variables
+
+local Sounds = nil -- Instead of nil, write the location of your folder with sounds. You can play any of them while your attack.
+local Attacks = {} -- Inside put your names of your attacks like this: {"Swing", "Punch", "Rain"}
+local Attack1 = Attacks[math.random(1,#Attacks)]
+local Attack2 = Attacks[math.random(1,#Attacks)]
+local Attack3 = Attacks[math.random(1,#Attacks)]
+local Attack4 = Attacks[math.random(1,#Attacks)]
+local Attack5 = Attacks[math.random(1,#Attacks)]
+local Attack6 = Attacks[math.random(1,#Attacks)]
+local Attack7 = Attacks[math.random(1,#Attacks)]
+local Attack8 = Attacks[math.random(1,#Attacks)]
+local Attack9 = Attacks[math.random(1,#Attacks)]
+local Attack10 = Attacks[math.random(1,#Attacks)]
+
+-- Attacks
+script.Parent.Triggered:Connect(function()
+     script.Parent.Enabled = false
+    if Attack1 == "AttackName" then
+        print() -- Here you can run your command
+        task.wait()
+    elseif Attack1 == "AttackName2" then
+        print() -- Run the other command
+        task.wait()
+    elseif Attack1 == "AttackName3" then
+        print() -- Run the final command. You can add more functions like these depending on how much attack you have.
+        task.wait()
+    end
+    if Attack2 == "AttackName" then
+        print() -- Here you can run your command
+        task.wait()
+    elseif Attack2 == "AttackName2" then
+        print() -- Run the other command
+        task.wait()
+    elseif Attack2 == "AttackName3" then
+        print() -- Run the final command. You can add more functions like these depending on how much attack you have.
+        task.wait()
+    end
+    -- In between attacks, you can do animations to damage the boss. We'll skip the other 8 attacks
+    print("Boss defeated!")
+    task.wait(5) -- any number
+    script.Parent.Enabled = true
+end
